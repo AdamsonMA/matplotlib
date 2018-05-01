@@ -986,9 +986,6 @@ class PolarAxes(Axes):
     def get_xaxis_text2_transform(self, pad):
         return self._xaxis_text_transform, 'center', 'center'
 
-
-    
-
     def get_yaxis_transform(self, which='grid'):
         if which in ('tick1', 'tick2'):
             return self._yaxis_text_transform
@@ -1188,7 +1185,7 @@ class PolarAxes(Axes):
         Returns
         -------
         float
-            The maximum radius of chart.
+            The maximum radius of polar plot.
         """
         return self.viewLim.ymax
 
@@ -1197,7 +1194,7 @@ class PolarAxes(Axes):
         Parameters
         ----------
         rmin : number
-            Set minimumradius to value rmin.
+            Set minimum radius to value rmin.
         """
         self.viewLim.y0 = rmin
 
@@ -1206,12 +1203,12 @@ class PolarAxes(Axes):
         Returns
         -------
         float
-            The minimum radius of chart.
+            The minimum polar plot radius.
         """
         return self.viewLim.ymin
 
     def set_rorigin(self, rorigin):
-        """Updates the chart origin
+        """Updates the polar plot origin
         
         Parameters
         ----------
@@ -1230,7 +1227,6 @@ class PolarAxes(Axes):
         return self._originViewLim.y0
 
     def set_rlim(self, *args, **kwargs):
-
          """Set the minimum and maximum radius.
          
         Parameters
@@ -1460,7 +1456,6 @@ PolarAxes.InvertedPolarTransform = InvertedPolarTransform
 PolarAxes.ThetaFormatter = ThetaFormatter
 PolarAxes.RadialLocator = RadialLocator
 PolarAxes.ThetaLocator = ThetaLocator
-
 
 
 # These are a couple of aborted attempts to project a polar plot using
